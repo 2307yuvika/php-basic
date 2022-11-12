@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<?php
+//declaring variables
+$txt = "Hello world!";
+$x = 5;
+$y = 10.5;
+
+echo $txt;
+echo "<br>";
+echo $x;
+echo "<br>";
+echo $y;
+
+//output variables(echo)
+$txt = "W3Schools.com";
+echo "I love $txt!";
+
+//example will output the sum of two variables
+$x = 5;
+$y = 4;
+echo $x + $y;
+
+//The scope of a variable is the part of the script where the variable can be referenced/used
+//PHP has three different variable scopes
+*local *global *static
+
+//global scope(A variable declared outside a function)
+
+$x = 5; // global scope
+function myTest() {
+    // using x inside this function will generate an error
+    echo "<p>Variable x inside function is: $x</p>";
+}
+myTest();
+
+echo "<p>Variable x outside function is: $x</p>";
+
+//local scope(A variable declared within a function)
+
+function myTest() {
+    $x = 5; // local scope
+    echo "<p>Variable x inside function is: $x</p>";
+}
+myTest();
+
+// using x outside the function will generate an error
+echo "<p>Variable x outside function is: $x</p>";
+
+//The if...elseif...else Statement
+$t = date("H");
+
+if ($t < "10") {
+    echo "Have a good morning!";
+} elseif ($t < "20") {
+    echo "Have a good day!";
+} else {
+    echo "Have a good night!";
+}
+
+//while loop
+$x = 0;
+
+while($x <= 100) {
+    echo "The number is: $x <br>";
+    $x+=10;
+}
+
+//for loop
+for ($x = 0; $x <= 10; $x++) {
+    echo "The number is: $x <br>";
+}
+
+
+?>
+
+</body>
+</html>
